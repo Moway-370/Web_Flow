@@ -223,7 +223,7 @@ const sb = window.__sb;
           window.location.href = '/';
         }, 600);
       } catch (err) {
-        showError('login-message', '登入失敗：' + (err?.message || err));
+        showError('login-message', '無法連線至伺服器，可能被醫院網路封鎖。請改用手機熱點，或直接使用下載功能儲存資料（不需登入）' + (err?.message || err));
       } finally {
         btn.disabled = false;
         btn.textContent = '登入';
