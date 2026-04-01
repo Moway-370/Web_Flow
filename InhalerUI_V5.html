@@ -329,9 +329,9 @@ async function listenSerial() {
 }
 
 function handleSerialLine(line) {
-  if (line.includes("Phase 1 complete!")) { setStep(1); return; }
-  if (line.includes("Phase 2 complete!!")) { setStep(2); return; }
-  if (line.includes("Phase 4 complete!!!")) { setStep(3); return; }
+  if (line.includes("Phase 1 complete!"))  setStep(1);
+  if (line.includes("Phase 2 complete!!")) setStep(2);
+  if (line.includes("Phase 4 complete!!!")) setStep(3);
 
   const match = line.match(/Flow[:：]\s*([0-9.]+)/i);
   if (match) {
